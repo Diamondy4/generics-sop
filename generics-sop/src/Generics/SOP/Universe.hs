@@ -94,7 +94,7 @@ type Rep a = SOP I (Code a)
 --
 -- still holds.
 --
-class (All SListI (Code a)) => Generic (a :: Type) where
+class (AllF SListI (Code a)) => Generic (a :: Type) where
   -- | The code of a datatype.
   --
   -- This is a list of lists of its components. The outer list contains
